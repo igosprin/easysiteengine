@@ -9,7 +9,7 @@ require_once ROOT_PATH . 'config.php';
 require ROOT_PATH . 'vendor/autoload.php';
 
 
-$app = new Easysite\Library\Application(PATH_CONTROLLER, ROUTS, LANGUAGES);
+$app = new Easysite\Library\Application(PATH_CONTROLLER, PATH_VIEW, ROUTS, LANGUAGES);
 $app->init();
 
 
