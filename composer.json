@@ -3,7 +3,7 @@
     "description": "The skeleton application",
     "type": "project",
     "require": {
-        "easysite/library": "1.0.0"
+        "easysite/library": "1.0.1"
     },
     "authors": [
         {
