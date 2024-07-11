@@ -1,0 +1,14 @@
+{
+    "name": "easysite/engine",
+    "description": "The skeleton application",
+    "type": "project",
+    "require": {
+        "easysite/library": "1.0.0"
+    },
+    "authors": [
+        {
+            "name": "igorarbitas",
+            "email": "igor@arbitas.com"
+        }
+    ]
+}
