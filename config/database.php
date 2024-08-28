@@ -5,6 +5,6 @@ return [
         'dbname' => '',
         'username' => '',
         'pass' => '',
-        'charset' => ''
+        'charset' => '',
     ]
 ];
