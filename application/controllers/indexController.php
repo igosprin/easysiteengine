@@ -6,6 +6,7 @@ class indexController extends Controller
 
     public function indexAction()
     {
+        //this test
         $this->view->setLayout('layout/index.html');
         $data = ['one' => 'ii', 'two' => '2'];
         $this->view->setTitle('start::index');
