@@ -1,16 +1,18 @@
 <?php
 
-$config=new Easysite\Library\Config;
-use Easysite\Library\Config\Storage\StorageSession;
+use Easysite\Library\Config;
+use Easysite\Library\Config\ConfigSession;
+use Easysite\Library\Config\ConfigCache;
+
 define("PATH_CONFIG", ROOT_PATH . 'config/');
 
-$config->set('pathApplication',ROOT_PATH . 'application/');
-$config->set('pathController',$config->get('pathApplication') . 'controllers/');
-$config->set('viewPath',$config->get('pathApplication').'view/');
-$config->set('session', new StorageSession(require_once PATH_CONFIG . 'session.php'));
-$config->set('database',require_once PATH_CONFIG . 'database.php');
-$config->set('redirect',require_once PATH_CONFIG . 'redirect.php');
-$config->set('routs',require_once PATH_CONFIG . 'routs.php');
-$config->set('languagesList',require_once PATH_CONFIG . 'lang.php');
-
-var_dump($config->getAll());
+Config::set('pathApplication',ROOT_PATH . 'application/');
+Config::set('pathController',Config::get('pathApplication') . 'controllers/');
+Config::set('viewPath',Config::get('pathApplication').'view/');
+Config::set('session', new ConfigSession(require_once PATH_CONFIG . 'session.php'));
+Config::set('database',require_once PATH_CONFIG . 'database.php');
+Config::set('redirect',require_once PATH_CONFIG . 'redirect.php');
+Config::set('routs',require_once PATH_CONFIG . 'routs.php');
+Config::set('languagesList',require_once PATH_CONFIG . 'lang.php');
+Config::set('cache',new ConfigCache(require_once PATH_CONFIG . 'cache.php'));
+Config::set('storage',require_once PATH_CONFIG . 'storage.php');

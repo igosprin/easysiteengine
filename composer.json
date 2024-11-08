@@ -2,13 +2,13 @@
     "name": "easysite/engine",
     "description": "The skeleton application",
     "type": "project",
-    "require": {
-        "easysite/library": "1.0.4"
-    },
     "authors": [
         {
             "name": "igor sprinchan",
             "email": "igosprin@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "easysite/library": "^1.2"
+    }
 }

@@ -3,9 +3,9 @@
 //&paramsName - dynamic parametr
 return [
     'competition' => [
-        'controller' => 'competition',
+        'controller' => 'index',
         'type_method' => 'get',
-        'action' => 'index'
+        'action' => 'get'
     ],
     'competition/&seasonId' => [
         'controller' => 'competition',

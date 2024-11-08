@@ -1,6 +1,6 @@
 <?php
 return [
-    'driver'=>'Standart',
+    'driver'=>'standart',
     'lifeTime'=>'120',
     'aliase'=>'EasySiteSession',
     'filePath'=>''   
