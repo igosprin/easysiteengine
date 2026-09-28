@@ -1,0 +1,13 @@
+<?php
+extract($data);
+$e = fn ($v) => htmlspecialchars((string) $v, ENT_QUOTES);
+?>
+<div class="page-header d-print-none">
+    <h2 class="page-title">Account</h2>
+</div>
+<div class="card">
+    <div class="card-body">
+        <p>Logged in as <strong><?php echo $e($user['name']) ?></strong> (<?php echo $e($user['email']) ?>)</p>
+        <p class="text-secondary mb-0">Role: <?php echo $e($user['role']) ?> &middot; Plan: <?php echo $e($user['plan']) ?></p>
+    </div>
+</div>

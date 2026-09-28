@@ -2,25 +2,36 @@
 //maximum nesting  number 3
 //&paramsName - dynamic parametr
 return [
-    'competition' => [
-        'controller' => 'index',
+    'login' => [
+        'controller' => 'login',
         'type_method' => 'get',
-        'action' => 'get'
+        'action' => 'show'
     ],
-    'competition/&seasonId' => [
-        'controller' => 'competition',
+    'login/submit' => [
+        'controller' => 'login',
+        'type_method' => 'post',
+        'action' => 'submit'
+    ],
+    'register' => [
+        'controller' => 'register',
         'type_method' => 'get',
-        'action' => 'get'
+        'action' => 'show'
     ],
-    'competition/&seasonId/standings' => [
-        'controller' => 'user',
+    'register/submit' => [
+        'controller' => 'register',
+        'type_method' => 'post',
+        'action' => 'submit'
+    ],
+    'logout' => [
+        'controller' => 'logout',
         'type_method' => 'get',
-        'action' => 'max'
+        'action' => 'index'
     ],
-    'user/&val1/&val2' => [
-        'controller' => 'user',
+    'account' => [
+        'controller' => 'account',
         'type_method' => 'get',
-        'action' => 'ffHh'
+        'action' => 'show',
+        'middleware' => ['auth' => ['role' => 'user']],
+        'dir' => 'users'
     ],
-
 ];

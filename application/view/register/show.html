@@ -1,0 +1,33 @@
+<?php
+extract($data);
+$e = fn ($v) => htmlspecialchars((string) $v, ENT_QUOTES);
+?>
+<div class="row justify-content-center">
+    <div class="col-12 col-md-5">
+        <div class="card card-md mt-4">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Register</h2>
+                <?php if ($error): ?><div class="alert alert-danger"><?php echo $e($error) ?></div><?php endif ?>
+                <form action="/register/submit" method="post" autocomplete="off">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" value="<?php echo $e($name) ?>" required autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" value="<?php echo $e($email) ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" minlength="8" required>
+                        <div class="form-hint">At least 8 characters</div>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn btn-primary w-100">Create account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-secondary mt-3">Already have an account? <a href="/login">Log in</a></div>
+    </div>
+</div>

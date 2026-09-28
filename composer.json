@@ -1,6 +1,7 @@
 {
     "name": "easysite/engine",
     "description": "The skeleton application",
+    "license": "MIT",
     "type": "project",
     "authors": [
         {
@@ -9,6 +10,14 @@
         }
     ],
     "require": {
-        "easysite/library": "^1.2"
+        "easysite/library": "^1.1",
+        "guzzlehttp/guzzle": "^7.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Services\\": "application/services/",
+            "App\\Models\\": "application/models/",
+            "App\\Middleware\\": "application/middleware/"
+        }
     }
 }
